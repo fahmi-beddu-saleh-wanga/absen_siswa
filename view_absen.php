@@ -6,6 +6,13 @@ include "koneksi.php";
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @media print {
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
     <title>Data Absensi</title>
 </head>
 <body>
@@ -17,6 +24,7 @@ include "koneksi.php";
         <tr>
             <th>ID</th>
             <th>Nama Siswa</th>
+            <th>Jenis Kelamin</th>
             <th>Kelas</th>
             <th>Mata Pelajaran</th>
             <th>Hari</th>
@@ -26,10 +34,11 @@ include "koneksi.php";
         <tbody>
         <?php
         // Menggunakan JOIN untuk mendapatkan informasi dari berbagai tabel
-        $result = $db->query("SELECT absensi.id, students.name AS nama_siswa, classes.class_name AS nama_kelas, subjects.subject_name AS mata_pelajaran, absensi.hari, absensi.keterangan FROM absensi 
-            INNER JOIN students ON absensi.student_id = students.id
-            INNER JOIN classes ON absensi.class_id = classes.id
-            INNER JOIN subjects ON absensi.subject_id = subjects.id");
+        $result = $db->query("SELECT absensi.id, students.name AS nama_siswa, jenis_kelamin, classes.class_name AS nama_kelas, subjects.subject_name AS mata_pelajaran, absensi.hari, absensi.keterangan FROM absensi 
+                INNER JOIN students ON absensi.student_id = students.id
+                INNER JOIN classes ON absensi.class_id = classes.id
+                INNER JOIN subjects ON absensi.subject_id = subjects.id");
+
 
         // Menangani kesalahan query
         if ($result === false) {
@@ -40,6 +49,7 @@ include "koneksi.php";
             echo "<tr>
                         <td>{$row['id']}</td>
                         <td>{$row['nama_siswa']}</td>
+                        <td>{$row['jenis_kelamin']}</td>
                         <td>{$row['nama_kelas']}</td>
                         <td>{$row['mata_pelajaran']}</td>
                         <td>{$row['hari']}</td>
@@ -52,8 +62,11 @@ include "koneksi.php";
         </tbody>
     </table>
 
-    <button class="btn btn-primary" onclick="printAbsen()">Print</button>
+    <button class="btn btn-primary print-btn" onclick="printAbsen()">Print</button>
+<a href="bootstrapdashboard/home.php" class="btn btn-secondary print-btn">Kembali</a>
+
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

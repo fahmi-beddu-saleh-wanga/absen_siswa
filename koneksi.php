@@ -2,7 +2,7 @@
 $hostname = "localhost";
 $username = "root"; // Sesuaikan ini dengan username MySQL Anda
 $password = "";
-$db_name = "absen_dashboard";
+$db_name = "absenn";
 
 $db = new mysqli($hostname, $username, $password, $db_name);
 

@@ -33,6 +33,15 @@
                 ?>
             </select>
         </div>
+
+        <div class="mb-3">
+            <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+            <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+        </div>
+
         <div class="mb-3">
             <label for="kelas" class="form-label">Kelas</label>
             <select class="form-select" id="kelas" name="kelas" required>
@@ -57,6 +66,7 @@
                 ?>
             </select>
         </div>
+
         <div class="mb-3">
             <label for="mata_pelajaran" class="form-label">Mata Pelajaran</label>
             <select class="form-select" id="mata_pelajaran" name="mata_pelajaran" required>
@@ -81,6 +91,7 @@
                 ?>
             </select>
         </div>
+
         <div class="mb-3">
             <label for="hari" class="form-label">hari</label>
             <select class="form-select" id="hari" name="hari" required>
@@ -103,6 +114,7 @@
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="bootstrapdashboard/home.php" class="btn btn-secondary">Kembali</a>
     </form>
 </div>
 

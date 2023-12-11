@@ -1,0 +1,110 @@
+body {
+  background: #4e88c3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ganti jenis font sesuai keinginan */
+}
+
+#side_nav {
+  background: #343a40;
+  min-width: 250px;
+  max-width: 250px;
+  transition: all 0.3s;
+  color: #fff;
+  padding-top: 20px;
+}
+
+#side_nav a {
+  color: #fff;
+}
+
+#side_nav a:hover {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+.content {
+  min-height: 100vh;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px; /* Tambahkan sudut lengkung pada konten */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-box {
+  background: #212529;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header-box h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.sidebar li.active {
+  background: #6c757d;
+  border-radius: 8px;
+}
+
+.sidebar li.active a,
+.sidebar li.active a:hover,
+.sidebar li a:hover {
+  color: #fff;
+}
+
+.navbar {
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  color: #000;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+.dashboard-content {
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Tambahkan warna background biru untuk dropdown */
+.sidebar li.dropdown .dropdown-menu {
+  background-color: #007bff;
+}
+
+/* Ganti warna teks pada dropdown item saat dihover atau aktif */
+.sidebar li.dropdown .dropdown-menu a,
+.sidebar li.dropdown .dropdown-menu a:hover {
+  color: #fff;
+}
+
+
+.btn-primary {
+  background: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-success {
+  background: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background: #218838;
+  border-color: #218838;
+}
+

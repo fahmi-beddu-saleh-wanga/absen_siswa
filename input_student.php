@@ -47,6 +47,8 @@
         </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+<a href="bootstrapdashboard/home.php" class="btn btn-secondary">Kembali</a>
+   
 </form>
 
 </div>

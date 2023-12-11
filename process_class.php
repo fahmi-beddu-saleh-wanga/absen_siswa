@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $query->close();
 
-    header("Location: index.php");
+    header("Location:bootstrapdashboard/home.php");
     exit();
 }
 

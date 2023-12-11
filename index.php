@@ -1,41 +1,48 @@
-<!-- index.php -->
-
-<!DOCTYPE html>
+<?php
+session_start();
+if (isset($_SESSION['status'])) {
+    header("Location:bootstrapdashboard/home.php");
+}
+?>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <title>Absensi Siswa Dashboard</title>
-</head>
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="container mt-4">
-    <h1>Absensi Siswa Dashboard</h1>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <div class="row mt-4">
-        <div class="col-md-3">
-            <h3>Data Siswa</h3>
-            <a href="view_students.php" class="btn btn-primary">Lihat Data Siswa</a>
-            <a href="input_student.php" class="btn btn-success">Input Data Siswa</a>
-        </div>
-        <div class="col-md-3">
-            <h3>Data Kelas</h3>
-            <a href="view_classes.php" class="btn btn-primary">Lihat Data Kelas</a>
-            <a href="input_class.php" class="btn btn-success">Input Data Kelas</a>
-        </div>
-        <div class="col-md-3">
-            <h3>Data Mata Pelajaran</h3>
-            <a href="view_subjects.php" class="btn btn-primary">Lihat Data Mata Pelajaran</a>
-            <a href="input_subject.php" class="btn btn-success">Input Data Mata Pelajaran</a>
-        </div>
-        <div class="col-md-3">
-            <h3>Absen Siswa</h3>
-            <a href="view_absen.php" class="btn btn-primary">Lihat Absen Siswa</a>
-            <a href="input_absen.php" class="btn btn-success">Input Absen Siswa</a>
-        </div>
-    </div>
-</div>
+   <link rel="stylesheet" href="stylee.css">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Absensi</title>
+  </head>
+  <body>
 
-</body>
+   <div class="global-container">
+        <div class="card login-form">
+                <div class="card-body">
+                        <h1 class="card-title text-center">SELAMAT DATANG</h1>
+                </div>
+                <div class="card-text">
+                    <form action="ceklogin.php?" method="POST">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                          </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                       
+                      </form>
+                </div>
+        </div>
+   </div>
+
+  </body>
 </html>
