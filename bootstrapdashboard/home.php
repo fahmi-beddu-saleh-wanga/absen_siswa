@@ -22,45 +22,14 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block" role="button"
                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Data Siswa
+                   Data Siswa
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="../view_students.php">Lihat Data Siswa</a>
-                    <a class="dropdown-item" href="../input_student.php">Input Data Siswa</a>
+                    <a class="dropdown-item" href="../input_absen.php">Input Data Siswa</a>
+                    <a class="dropdown-item" href="../absen_siswa.php">Absen Siswa</a>
                 </div>
             </li>
             <!-- Tambahkan dropdown dan link untuk menu lainnya -->
-
- 		<li class="dropdown">
-                <a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block" role="button"
-                   id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Data Kelas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="../view_classes.php">Lihat Data Kelas</a>
-                    <a class="dropdown-item" href="../input_class.php">Input Data Kelas</a>
-               </div>
-
-
- 		<li class="dropdown">
-                <a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block" role="button"
-                   id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Data Mata Pelajaran
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="../view_subjects.php">Lihat Data Mata Pelajaran</a>
-                    <a class="dropdown-item" href="../input_subject.php">Input Data Mata Pelajaran</a>
-                </div>
-
- 		<li class="dropdown">
-                <a href="#" class="dropdown-toggle text-decoration-none px-3 py-2 d-block" role="button"
-                   id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Data Absen
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="../view_absen.php">Lihat Data Absen</a>
-                    <a class="dropdown-item" href="../input_absen.php">Input Data Absen</a>
-                </div>
         </ul>
     </div>
 
@@ -78,7 +47,8 @@
                 </button>
                <!-- ... (Bagian lain dari HTML tetap sama) -->
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                    <h2 class="fs-5">Dashboard</h2>
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <!-- Ganti link Profile dengan Logout -->
@@ -95,43 +65,11 @@
         
 
         <div class="dashboard-content px-3 pt-4">
-            <h2 class="fs-5"> Dashboard</h2>
+            <p>
+Absen siswa adalah proses pencatatan kehadiran dan ketidakhadiran siswa di sekolah atau tempat pendidikan lainnya. Sistem absensi digunakan untuk memantau dan mencatat apakah seorang siswa hadir, izin, sakit, atau tidak masuk ke sekolah.
 
-            <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Jumlah Siswa</h5>
-                    <?php
-                    include "../koneksi.php";
-                        $result_students = $db->query("SELECT COUNT(*) AS total_students FROM students");
-                        $row_students = $result_students->fetch_assoc();
-                        echo "<p class='card-text'>{$row_students['total_students']}</p>";
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Jumlah Kelas</h5>
-                    <?php
-                        $result_classes = $db->query("SELECT COUNT(*) AS total_classes FROM classes");
-                        $row_classes = $result_classes->fetch_assoc();
-                        echo "<p class='card-text'>{$row_classes['total_classes']}</p>";
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Jumlah Mata Pelajaran</h5>
-                    <?php
-                        $result_subjects = $db->query("SELECT COUNT(*) AS total_subjects FROM subjects");
-                        $row_subjects = $result_subjects->fetch_assoc();
-                        echo "<p class='card-text'>{$row_subjects['total_subjects']}</p>";
-                    ?>
+Umumnya, proses absensi dilakukan pada setiap sesi pembelajaran atau hari sekolah. Cara tradisional absensi dilakukan dengan catatan manual, tetapi seiring berkembangnya teknologi, banyak sekolah yang menggunakan sistem absensi digital. </p>
+
                 </div>
             </div>
         </div>
