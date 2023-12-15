@@ -71,15 +71,21 @@
         a:hover {
             color: #0056b3;
         }
+
     </style>
     <title>Absen siswa</title>
 </head>
 <body>
 
-<h2>Absensi</h2>
+<h2>Input Data Absensi</h2>
     <form method="POST" action="process_input_absen.php"> <!-- Tambahkan action di sini -->
         <label for="nama">Nama Siswa:</label>
         <input type="text" name="nama" id="nama" required>
+
+       
+
+        <label for="nis">Nis:</label>
+        <input type="text" name="nis" id="nis" required>
 
         <label for="kelas">Kelas:</label>
         <input type="text" name="kelas" id="kelas" required>

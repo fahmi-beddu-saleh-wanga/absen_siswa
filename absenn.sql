@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 CREATE TABLE absen (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama_siswa VARCHAR(255) NOT NULL,
+    nis VARCHAR(50) NOT NULL,
     kelas VARCHAR(50) NOT NULL,
     mata_pelajaran VARCHAR(50) NOT NULL,
     hari VARCHAR(50) NOT NULL,

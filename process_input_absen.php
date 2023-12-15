@@ -3,13 +3,14 @@ include "koneksi.php";
 // Memeriksa apakah data telah dikirim melalui metode POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama_siswa = $_POST["nama"];
+    $nis = $_POST["nis"];
     $kelas = $_POST["kelas"];
     $mata_pelajaran = $_POST["mata_pelajaran"];
     $hari = $_POST["hari"];
     $keterangan = $_POST["keterangan"];
 
     // Menyimpan data ke dalam tabel absen
-    $query = "INSERT INTO absen (nama_siswa, kelas, mata_pelajaran, hari, keterangan) VALUES ('$nama_siswa', '$kelas', '$mata_pelajaran', '$hari', '$keterangan')";
+    $query = "INSERT INTO absen (nama_siswa, nis, kelas, mata_pelajaran, hari, keterangan) VALUES ('$nama_siswa','$nis', '$kelas', '$mata_pelajaran', '$hari', '$keterangan')";
 
     if ($db->query($query) === TRUE) {
         echo "Data berhasil disimpan";
